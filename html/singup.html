@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>회원가입</title>
+  <link rel="stylesheet" href="../css/singup.css">
+</head>
+<body>
+
+  <!-- 회원가입 폼 전체를 감싸는 컨테이너 -->
+  <div class="login-container">
+    <h2>회원가입</h2>
+
+    <!-- 닫기 버튼: 팝업 창 닫기 -->
+    <button onclick="window.close()" id="exit">X</button>
+
+    <!-- 로그인 입력 폼 -->
+    <form>
+      <div class="input-group">
+        <input type="email" id="email" required placeholder=" ">
+        <label for="email">이메일</label>
+      </div>
+      <div class="input-group">
+        <input type="text" id="username" required placeholder=" ">
+        <label for="username">사용자명</label>
+      </div>
+      <div class="input-group">
+        <input type="password" id="password" required placeholder=" ">
+        <label for="password">비밀번호</label>
+      </div>
+
+      <!-- 로그인 버튼 -->
+      <a href="login.html"><input type="submit" value="회원가입"></a>
+
+      <div class="options">
+        <div class="links">
+          <a href="login.html">이미 계정이 있으신가요?</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

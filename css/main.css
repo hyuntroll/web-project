@@ -1,0 +1,267 @@
+body {
+    margin: 0px;  
+    color: #333;
+}
+header {
+    background-color: white;
+
+}
+#logo {
+    width: 100px;
+    float: left;
+}
+header ul {
+    /* 오른쪽으로 배치 */
+    float: right;
+}
+header li {
+    /* 요소를 인라인으로 */
+    display: inline;
+    padding: 20px;
+    transition: color 0.3s;
+}
+
+header li a {
+    transition: color 0.3s;
+}
+header li a:hover {
+    color: #2c5530;
+}
+
+header li:hover {
+    color: #2c5530;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.cart-icon {
+    width: 18px;
+    height: 18px;
+    /* 수직으로 정렬: 중앙 */
+    vertical-align: middle;
+
+}
+
+
+#top_menu {
+    display: block;
+    background-color: white;
+
+}
+
+#top_menu ul {
+    /* float의 float속성을 무효화 시킴 */
+    clear: both;
+    padding: 13px;
+    margin-bottom: 0px;
+
+    /* border: 1px solid gainsboro; */
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+
+    text-align: center;
+
+}
+#top_menu li {
+    display: inline;
+    padding: 13px 40px;
+    transition: color 0.3s;
+
+}
+#top_menu li:hover {
+    color: #2c5530;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav li a {
+    transition: color 0.3s;
+}
+nav li, header li {
+    cursor:pointer;
+}
+nav li:hover, nav:hover a {
+    color: #2c5530;
+}
+
+#sub_menu {
+    width: 100%;
+    height: 50vh;
+    background-image: url("https://news.gm.go.kr/bbs/download.php?table=bbs_12&savefilename=bbs_12_3978_1.jpg&filename=%28%EA%B4%91%EB%AA%851%29%EA%B4%91%EB%AA%85%EC%8B%9C+%EC%82%AC%ED%9A%8C%EC%A0%81%EA%B2%BD%EC%A0%9C+%EA%B8%B0%EC%97%85+%EB%8C%80%ED%91%9C%EC%99%80+%EC%82%AC%ED%9A%8C%EC%A0%81%EA%B2%BD%EC%A0%9C%EA%B3%BC+%EC%A7%81%EC%9B%90+%EB%93%B1+5%EB%AA%85%EC%9D%B4+%EC%A7%80%EB%82%9C+25%EC%9D%BC+%E2%80%98%EA%B3%B5%EC%A0%95%EB%AC%B4%EC%97%AD+%EB%A7%A4%EC%9E%A5+%EC%9A%B4%EC%98%81+%EC%82%AC%EB%A1%80%E2%80%99%EB%A5%BC+%EB%B2%A4%EC%B9%98%EB%A7%88%ED%82%B9%ED%95%98%EA%B8%B0+%EC%9C%84%ED%95%B4++%EC%8B%9C%ED%9D%A5%EC%8B%9C%EB%A5%BC+%EB%B0%A9%EB%AC%B8%ED%96%88%EB%8B%A4.jpg");
+    background-repeat: no-repeat;
+    background-position: 70% 50%;
+    background-size: auto 250%;
+
+    border-bottom: 1px solid #333;
+    
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    display: none;
+}
+
+
+
+main iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#footer {
+    background-color: #222;
+    color: #ddd;
+    padding: 40px 20px;
+    font-size: 14px;
+}
+
+.footer-content {
+    /* 콘텐츠 영역이 너무 커지지 않게 */
+    max-width: 1200px;
+    /* 위 아래는 주지 않고 좌/우 는 균등하게 */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color: #ccc;
+    margin: 0 10px;
+    text-decoration: none;
+    /* 색깔 style 변하는 속도 지정 */
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    font-size: 13px;
+    color: #aaa;
+}
+
+.menu-toggle {
+    transition: color 0.3s;
+}
+.menu-toggle:hover {
+    color: #2c5530;
+}
+  
+
+@media screen and ( max-width:768px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        /* 한줄에 표시할 지, 여러줄에 나눠서 할지 */
+        flex-wrap: nowrap; 
+
+        flex-basis: 100px;
+
+        z-index: 1000;
+
+    }
+    .menu-toggle, header ul {
+        flex: 0 0 auto;
+        
+    }
+
+    .menu-toggle {
+        display: inline;
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .logo-container {
+        position: absolute;
+        /* 부모 요소의 50% 에서 왼쪽 경계선에 맞춤*/
+        left: 50%; 
+        /* 왼쪽으로 자기 너비의 50%를 이동시킴 */
+        transform: translateX(-75%);
+    }
+
+    header ul {
+        display: inline;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 5px;
+        padding: 0;
+
+    }
+
+    header ul li {
+        font-size: 13px;
+        padding: 0px 10px;
+        text-align: center;
+
+    }   
+
+    #top_menu {
+        
+        display: none;
+        padding-top: 5px;
+
+        position: relative;
+        z-index: 1001;
+        background-color: white;
+
+
+    }
+
+    #top_menu ul {
+        /* flex 를 이용한 레이아웃*/
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+        /* margin-top: 5px; */
+        margin: 0;
+        position: absolute; /* 배너가 가리도록 */
+
+        z-index: 999;
+        background-color: white;
+
+    }
+    #top_menu li {
+        display: block;
+        text-align: center;
+        padding: 15px 10px;
+        border-bottom: 1px solid #bbb;
+
+    }
+
+    #sub_menu {
+        width: 100%;
+        height: 25vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .footer-links a {
+        display: block;
+        margin: 10px 0;
+    }
+
+}

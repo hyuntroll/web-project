@@ -1,0 +1,35 @@
+main {
+    margin: 25px;
+    padding: 0;
+    color: #333;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+/* 단락들을 모아두는 컨테이너 */
+.fairtrade-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 0;
+}
+
+hr {
+    border: 1px solid #333;
+}
+
+
+article {
+    margin: 0 auto;
+    width: 100%;     
+    align-items: center;              
+    padding: 15px;
+
+    line-height: 1.8;
+    box-sizing: border-box;
+
+}
+
+
+

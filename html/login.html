@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>로그인</title>
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+
+  <!-- 로그인 폼 전체를 감싸는 컨테이너 -->
+  <div class="login-container">
+    <h2>로그인</h2>
+
+    <!-- 닫기 버튼: 팝업 창 닫기 -->
+    <button onclick="window.close()" id="exit">X</button>
+
+    <!-- 로그인 입력 폼 -->
+    <form>
+      <div class="input-group">
+        <input type="email" id="email" required placeholder=" ">
+        <label for="email">이메일</label>
+      </div>
+      <div class="input-group">
+        <input type="password" id="password" required placeholder=" ">
+        <label for="password">비밀번호</label>
+      </div>
+
+      <div class="options">
+        <div class="links">
+          <a href="singup.html">회원가입</a>
+          <a href="#">비밀번호 찾기</a>
+        </div>
+      </div>
+
+      <!-- 로그인 버튼 -->
+      <input type="submit" value="로그인">
+    </form>
+  </div>
+</body>
+</html>

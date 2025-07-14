@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구매하기 - 공정거래 마켓</title>
+    <!-- 구매 페이지 전용 스타일시트 -->
+    <link rel="stylesheet" href="../css/checkout.css">
+</head>
+<body>
+    <!-- ======================================== -->
+    <!-- 헤더 섹션 - 네비게이션 메뉴 -->
+    <!-- ======================================== -->
+    <header>
+        <nav>
+            <div class="nav-container">
+                <!-- 브랜드 로고/제목 -->
+                <div class="nav-brand">
+                    <!-- <h1>공정거래 마켓</h1> -->
+                </div>
+                <!-- 네비게이션 링크 -->
+                <div class="nav-links">
+                    <a href="shop.html" class="nav-link">상품</a> <!-- 상품 페이지로 이동 -->
+                    <a href="checkout.html" class="nav-link active">구매</a> <!-- 현재 페이지 (활성 상태) -->
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ======================================== -->
+    <!-- 메인 콘텐츠 영역 -->
+    <!-- ======================================== -->
+    <main>
+        <!-- 히어로 섹션 - 구매 페이지 타이틀 -->
+        <section class="hero">
+            <h1>구매하기</h1>
+            <p>주문 정보를 확인하고 결제를 완료하세요</p>
+        </section>
+
+        <!-- 구매 컨테이너 - 주문 요약과 고객 정보 -->
+        <div class="checkout-container">
+            <!-- 주문 요약 섹션 -->
+            <div class="order-summary">
+                <h2>주문 요약</h2>
+                <div class="order-items" id="orderItems">
+                    <!-- JavaScript로 주문 아이템들이 동적으로 생성됨 -->
+                </div>
+                <div class="order-total">
+                    <span>총 금액:</span>
+                    <span id="orderTotal">0원</span>
+                </div>
+            </div>
+
+            <!-- 고객 정보 입력 섹션 -->
+            <div class="customer-info">
+                <h2>배송 정보</h2>
+                <form id="customerForm">
+                    <!-- 이름 입력 -->
+                    <div class="form-group">
+                        <label for="customerName">이름 *</label>
+                        <input type="text" id="customerName" name="customerName" required placeholder="받는 분 이름을 입력하세요">
+                    </div>
+                    <!-- 전화번호 입력 -->
+                    <div class="form-group">
+                        <label for="customerPhone">전화번호 *</label>
+                        <input type="tel" id="customerPhone" name="customerPhone" required placeholder="010-0000-0000">
+                    </div>
+                    <!-- 주소 입력 -->
+                    <div class="form-group">
+                        <label for="customerAddress">배송 주소 *</label>
+                        <textarea id="customerAddress" name="customerAddress" rows="3" required placeholder="상세한 배송 주소를 입력하세요"></textarea>
+                    </div>
+                    <!-- 요청사항 입력 -->
+                    <div class="form-group">
+                        <label for="customerNote">요청사항</label>
+                        <textarea id="customerNote" name="customerNote" rows="2" placeholder="배송 시 요청사항이 있으시면 입력해주세요"></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- 결제 정보 섹션 -->
+        <div class="payment-info">
+            <h2>결제 방법</h2>
+            <div class="payment-methods">
+                <!-- 신용카드 결제 옵션 -->
+                <div class="payment-option">
+                    <input type="radio" id="creditCard" name="paymentMethod" value="creditCard" checked>
+                    <label for="creditCard">신용카드</label>
+                </div>
+                <!-- 계좌이체 결제 옵션 -->
+                <div class="payment-option">
+                    <input type="radio" id="bankTransfer" name="paymentMethod" value="bankTransfer">
+                    <label for="bankTransfer">계좌이체</label>
+                </div>
+                <!-- 간편결제 옵션 -->
+                <div class="payment-option">
+                    <input type="radio" id="simplePay" name="paymentMethod" value="simplePay">
+                    <label for="simplePay">간편결제 (카카오페이, 네이버페이)</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- 구매 액션 버튼들 -->
+        <div class="checkout-actions">
+            <!-- 뒤로가기 버튼 -->
+            <button class="back-btn" id="backBtn">뒤로가기</button>
+            <!-- 결제하기 버튼 -->
+            <button class="pay-btn" id="payBtn">결제하기</button>
+        </div>
+
+        <!-- ======================================== -->
+        <!-- 결제 처리 중 표시 (기본적으로 숨김) -->
+        <!-- ======================================== -->
+        <div class="payment-processing" id="paymentProcessing" style="display: none;">
+            <div class="processing-spinner"></div>
+            <h2>결제 처리 중...</h2>
+            <p>잠시만 기다려주세요.</p>
+        </div>
+
+        <!-- ======================================== -->
+        <!-- 주문 완료 표시 (기본적으로 숨김) -->
+        <!-- ======================================== -->
+        <div class="order-complete" id="orderComplete" style="display: none;">
+            <div class="complete-icon">✓</div>
+            <h2>주문이 완료되었습니다!</h2>
+            <p>주문번호: <span id="orderNumber">2024-001</span></p>
+            <p>배송 예정일: <span id="deliveryDate">3-5일 후</span></p>
+            <div class="complete-actions">
+                <button class="home-btn" id="homeBtn">홈으로 돌아가기</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- ======================================== -->
+    <!-- JavaScript 파일 연결 -->
+    <!-- ======================================== -->
+    <!-- 구매 페이지 기능 스크립트 -->
+    <script src="../js/checkout.js"></script>
+</body>
+</html> 

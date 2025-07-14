@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EthicShop</title>
+    <link rel="shortcut icon" href="../images/icon.png">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/fairtrade.css">
+</head>
+<body onload="loadPage('introduce.html')">
+
+    <!-- 헤더: 로고, 메뉴 버튼, 로그인/회원가입/장바구니 -->
+    <header>
+        <!-- 모바일용 메뉴 토글 버튼 -->
+        <button class="menu-toggle">☰</button>
+        
+        <!-- 로고 -->
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="../images/logo.png" id="logo" alt="웹사이트 로고">
+            </a>
+        </div>
+        
+        <!-- 로그인 / 회원가입 / 장바구니 -->
+        <ul>
+            <li><a href="#" onclick="openLoginForm()">로그인</a></li>
+            <li>회원가입</li>
+            <li><img class="cart-icon" src="../images/shopping-icon.png" alt="장바구니" /></li>
+        </ul>
+    </header>
+
+    <!-- 상단 메뉴 (탑 내비게이션) -->
+    <nav id="top_menu">
+        <ul>
+            <li><a href="fairtrade.html">공정무역이란?</a></li>
+            <li><a href="shopping.html">상품 구매</a></li>
+            <li>미디어</li>
+            <li>참여하기</li>
+            <li>기업소개</li>
+        </ul>
+    </nav>
+
+    <!-- 배너 영역 (이미지 등 배경용으로 사용) -->
+    <nav id="sub_menu"></nav>
+
+    <!-- 모바일 메뉴 활성화 시 뒷 배경 어둡게 처리 -->
+    <div class="overlay"></div>
+    
+    <!-- 메인 콘텐츠 영역 (iframe으로 콘텐츠 불러오기) -->
+    <main>
+        <h1>공정무역이란?</h1>
+    <hr>
+
+    <!-- 공정무역 설명을 담은 섹션 -->
+    <section class="fairtrade-container">
+
+        <!-- 공정무역의 필요성에 대한 설명 블럭 -->
+        <div class="fairtrade-block">
+            <div class="text">
+                <h1>공정무역이란?</h1>
+                <p>
+                    세계 무역시장의 발전은 많은 국가들의 경제성장에 상당한 기여를 해왔지만,
+                    그 이익은 고르게 분배되지 않았습니다. 일부 글로벌기업들은 생산비용보다 낮은 가격을 요구하며,
+                    생산자들은 노동 착취와 저임금의 문제를 겪고 있습니다.
+                    <br><br>
+                    공정무역은 이러한 불공정한 무역 구조를 개선하려는 움직임입니다.
+                    정의, 공정성, 지속가능한 발전을 목표로 하며,
+                    생산자들이 생계를 유지하고 잠재력을 개발할 수 있도록 돕는 데 중점을 둡니다.
+                </p>
+            </div>
+            <!-- 관련 이미지 삽입 -->
+            <img src="https://cdn.imweb.me/thumbnail/20210722/d93b093f450b5.jpg" alt="공정무역 필요 이미지" />
+        </div>
+
+        <!-- 공정무역의 10대 원칙 소개 블럭 -->
+        <div class="fairtrade-block">
+            <div class="text">
+                <h1>공정무역 원칙</h1>
+                <ol class="fairtrade-principles">
+                    <li><strong>경제적으로 소외된 생산자들을 위한 기회 제공:</strong> 저개발 국가 생산자 지원</li>
+                    <li><strong>투명성과 책임성:</strong> 공정하고 책임 있는 거래 과정</li>
+                    <li><strong>공정한 무역 관행:</strong> 차별 없는 거래 및 결사의 자유 보장</li>
+                    <li><strong>공정한 가격 지불:</strong> 적정 임금 보장</li>
+                    <li><strong>아동 노동, 강제 노동 금지:</strong> 아동 권리 보호</li>
+                    <li><strong>차별 금지, 성 평등 보장:</strong> 인권 존중</li>
+                    <li><strong>양호한 노동 조건 보장:</strong> 안전한 작업 환경 제공</li>
+                    <li><strong>생산자 역량 강화:</strong> 기술·교육·재정 지원</li>
+                    <li><strong>환경 존중:</strong> 친환경 생산 장려</li>
+                    <li><strong>공정무역 인식 제고:</strong> 소비자 교육과 캠페인</li>
+                </ol>
+            </div>
+            <!-- 관련 이미지 2개 삽입 -->
+            <img src="../images/fair.png" alt="공정무역 원칙 이미지" />
+            <img src="../images/fair-mark.png" alt="공정무역 인증 마크" />
+        </div>
+
+        <!-- 공정무역 마크 소개 블럭 -->
+        <div class="fairtrade-block">
+            <div class="text">
+                <h1>공정무역 마크</h1>
+                <p>공정무역 마크는 제품포장 전면에 사용되며, 이는 가능한 재료들은 모두 공정무역 재료를 사용했다는 것을 의미합니다. 바나나와 커피와 같은 상품의 경우 단일 공정무역 재료 제품이며, 아이스크림이나 초콜렛 같은 경우는 한 가지 상품에 여러 가지 공정무역 재료들이 포함되어 있습니다. 또한 금이나 은이 포함되는 액세서리의 경우에 해당 상품에 들어가는 금, 은 재료는 공정무역 인증을 받은 것이어야 합니다.</p>
+            </div>
+            <!-- 공정무역 마크 이미지 -->
+            <img src="../images/fair-trade-icon.png" id="trade-icon" alt="공정무역 마크 이미지" />
+        </div>
+        
+    </section>
+    </main>
+
+    <!-- 푸터: 사이트 정보 및 링크 -->
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>EthicShop</h2>
+            </div>
+
+
+            <div class="footer-links">
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">사이트맵</a>
+            </div>
+
+
+            <div class="footer-info">
+                <p>상호명: EthicShop | 대표: 현승민</p>
+                <p>사업자등록번호: 123-45-67890</p>
+                <p>주소: 대구광역시 북구 검단로 255</p>
+                <p>© 2025 EthicShop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

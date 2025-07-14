@@ -1,0 +1,89 @@
+main {
+    margin: 30px;
+    padding: 0;
+    color: #333;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.fairtrade-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 20px;
+
+}
+
+hr {
+    border: 1px solid #333;
+}
+
+/* 단락 - 플랙스로 글이랑 사진이랑 나눠서 */
+.fairtrade-block {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;             
+    align-items: center;        
+
+    justify-content: space-between; 
+    gap: 50px;                  
+    padding: 16px 0 50px;
+
+    box-sizing: border-box;
+
+}
+
+.fairtrade-principles {
+    padding-left: 20px;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.fairtrade-principles li {
+    margin-bottom: 15px;
+}
+
+.fairtrade-block .text {
+    /* 기준선에 맞춰 정렬  */
+    align-self: baseline;
+    flex: 1 1 50%; /* flex-grow, flex-shrink, flex-basis */
+    min-width: 300px;
+
+    box-sizing: border-box;
+  
+}
+
+.fairtrade-block img {
+    flex: 1 1 40%; /* flex-grow, flex-shrink, flex-basis */
+    width: 60vw;
+    max-width: 700px;
+    min-width: 450px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* 공정무역 아이콘의 최대 최소 크기 지정 */
+.fairtrade-block img#trade-icon {
+    max-width: 250px;
+    min-width: 50px;
+}
+
+
+/* 화면이 작아질 때 한 줄에 하나씩 */
+@media (max-width: 768px) {
+    .fairtrade-block {
+    
+        flex-direction: column;
+    }
+
+    .fairtrade-block img {
+        max-width: none;
+        min-height: 300px;
+    }
+
+}
+

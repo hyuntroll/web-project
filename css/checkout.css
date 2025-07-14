@@ -1,0 +1,582 @@
+
+/* ======================================== */
+/* 기본 스타일 리셋 */
+/* ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ======================================== */
+/* 헤더와 네비게이션 스타일 */
+/* ======================================== */
+header {
+    background-color: #2c5530;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-brand h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* ======================================== */
+/* 반응형 디자인 */
+/* ======================================== */
+@media (max-width: 767px) {
+    main {
+        padding: 1rem;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+}
+
+
+/* checkout.html 전용 스타일 */
+.checkout-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.order-summary {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+.order-summary h2 {
+    color: #2c5530;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* ======================================== */
+        /* 히어로 섹션 스타일 */
+        /* ======================================== */
+        .hero {
+            text-align: center;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, #4a7c59, #2c5530);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* ======================================== */
+        /* 구매 컨테이너 레이아웃 */
+        /* ======================================== */
+        .checkout-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2열 그리드 레이아웃 */
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* ======================================== */
+        /* 주문 요약 섹션 */
+        /* ======================================== */
+        .order-summary {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            height: fit-content;
+        }
+
+        .order-summary h2 {
+            color: #2c5530;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .order-items {
+            margin-bottom: 2rem;
+        }
+
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .order-item:last-child {
+            border-bottom: none;
+        }
+
+        .order-item-info {
+            flex: 1;
+        }
+
+        .order-item-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: #2c5530;
+        }
+
+        .order-item-details {
+            color: #495057;
+            font-size: 1rem;
+        }
+
+        .order-item-total {
+            font-weight: bold;
+            color: #e74c3c;
+            font-size: 1.1rem;
+        }
+
+        .order-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.3rem;
+            font-weight: bold;
+            padding-top: 1rem;
+            border-top: 2px solid #2c5530;
+            color: #2c5530;
+        }
+
+        /* ======================================== */
+        /* 고객 정보 입력 폼 */
+        /* ======================================== */
+        .customer-info {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .customer-info h2 {
+            color: #2c5530;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            color: #212529;
+            font-size: 1.1rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.85rem;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 1.05rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            color: #212529;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #6c757d;
+            opacity: 1;
+        }
+
+        /* ======================================== */
+        /* 결제 정보 섹션 */
+        /* ======================================== */
+        .payment-info {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            margin-top: 2rem;
+        }
+
+        .payment-info h2 {
+            color: #2c5530;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .payment-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .payment-option {
+            background: #f8f9fa;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 1rem;
+            flex: 1;
+            cursor: pointer;
+            transition: border-color 0.3s, background 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .payment-option:hover {
+            border-color: #2c5530;
+            background: #eafaf1;
+        }
+
+        .payment-option input[type="radio"] {
+            margin-right: 0.5rem;
+        }
+
+        .payment-option label {
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        /* ======================================== */
+        /* 구매 액션 버튼들 */
+        /* ======================================== */
+        .checkout-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .back-btn {
+            background: #eee;
+            color: #333;
+            border: none;
+            padding: 0.8em 2em;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .back-btn:hover {
+            background: #ccc;
+        }
+
+        .pay-btn {
+            background: #2c5530;
+            color: #fff;
+            border: none;
+            padding: 0.8em 2em;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .pay-btn:hover {
+            background: #4a7c59;
+        }
+
+        /* ======================================== */
+        /* 결제 처리 중 표시 */
+        /* ======================================== */
+        .payment-processing {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 0;
+        }
+
+        .processing-spinner {
+            width: 60px;
+            height: 60px;
+            border: 6px solid #eee;
+            border-top: 6px solid #2c5530;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 2rem;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .payment-processing h2 {
+            color: #2c5530;
+            margin-bottom: 1rem;
+        }
+
+        .payment-processing p {
+            color: #666;
+        }
+
+        /* ======================================== */
+        /* 주문 완료 표시 */
+        /* ======================================== */
+        .order-complete {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 0;
+        }
+
+        .complete-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #2c5530;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .order-complete h2 {
+            color: #2c5530;
+            margin-bottom: 1rem;
+        }
+
+        .order-complete p {
+            color: #666;
+        }
+
+        .complete-actions {
+            margin-top: 2rem;
+        }
+
+        .home-btn {
+            background: #2c5530;
+            color: #fff;
+            border: none;
+            padding: 0.8em 2em;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .home-btn:hover {
+            background: #4a7c59;
+        }
+
+        /* ======================================== */
+        /* 반응형 디자인 */
+        /* ======================================== */
+        @media (max-width: 991px) {
+            .checkout-container {
+                grid-template-columns: 1fr; /* 모바일에서는 1열로 */
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 767px) {
+            main {
+                padding: 1rem;
+            }
+            
+            .hero {
+                padding: 2rem 1rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+                margin-bottom: 0.75rem;
+            }
+            
+            .hero p {
+                font-size: 0.95rem;
+            }
+            
+            .checkout-container {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .order-summary,
+            .customer-info,
+            .payment-info {
+                padding: 1.5rem;
+            }
+            
+            .checkout-actions {
+                flex-direction: column; /* 모바일에서는 세로 배치 */
+            }
+        }
+
+        /* ======================================== */
+        /* 헤더와 네비게이션 스타일 */
+        /* ======================================== */
+        header {
+            background-color: #2c5530;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            /* justify-content: space-between; */
+            align-items: center;
+        }
+
+        .nav-brand h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        /* 반응형 네비게이션 */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+.order-items { margin-bottom: 2rem; }
+.order-item { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #eee; }
+.order-item:last-child { border-bottom: none; }
+.order-item-info { flex: 1; }
+.order-item-title { font-weight: 600; margin-bottom: 0.25rem; color: #2c5530; }
+.order-item-details { color: #495057; font-size: 1rem; }
+.order-item-total { font-weight: bold; color: #e74c3c; font-size: 1.1rem; }
+.order-total { display: flex; justify-content: space-between; font-size: 1.3rem; font-weight: bold; padding-top: 1rem; border-top: 2px solid #2c5530; color: #2c5530; }
+.customer-info { background-color: white; border-radius: 10px; padding: 2rem; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.customer-info h2 { color: #2c5530; margin-bottom: 1.5rem; font-size: 1.5rem; }
+.form-group { margin-bottom: 1.5rem; }
+.form-group label { display: block; margin-bottom: 0.75rem; font-weight: 600; color: #212529; font-size: 1.1rem; }
+.form-group input, .form-group textarea { width: 100%; padding: 0.85rem; border: 1px solid #ced4da; border-radius: 5px; font-size: 1.05rem; transition: border-color 0.3s, box-shadow 0.3s; color: #212529; }
+.form-group input::placeholder, .form-group textarea::placeholder { color: #6c757d; opacity: 1; }
+.payment-info { background-color: white; border-radius: 10px; padding: 2rem; box-shadow: 0 3px 10px rgba(0,0,0,0.1); margin-top: 2rem; }
+.payment-info h2 { color: #2c5530; margin-bottom: 1.5rem; font-size: 1.5rem; }
+.payment-methods { display: flex; gap: 1rem; margin-bottom: 1.5rem; }
+.payment-option { background: #f8f9fa; border: 1px solid #ced4da; border-radius: 5px; padding: 1rem; flex: 1; cursor: pointer; transition: border-color 0.3s, background 0.3s; display: flex; align-items: center; gap: 0.5rem; }
+.payment-option:hover { border-color: #2c5530; background: #eafaf1; }
+.payment-option input[type="radio"] { margin-right: 0.5rem; }
+.payment-option label { font-weight: 500; cursor: pointer; }
+.checkout-actions { display: flex; justify-content: flex-end; gap: 1rem; margin-top: 2rem; }
+.back-btn { background: #eee; color: #333; border: none; padding: 0.8em 2em; border-radius: 5px; font-size: 1.1em; cursor: pointer; transition: background 0.2s; }
+.back-btn:hover { background: #ccc; }
+.pay-btn { background: #2c5530; color: #fff; border: none; padding: 0.8em 2em; border-radius: 5px; font-size: 1.1em; cursor: pointer; transition: background 0.2s; }
+.pay-btn:hover { background: #4a7c59; }
+.payment-processing { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 3rem 0; }
+.processing-spinner { width: 60px; height: 60px; border: 6px solid #eee; border-top: 6px solid #2c5530; border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 2rem; }
+@keyframes spin { 100% { transform: rotate(360deg); } }
+.payment-processing h2 { color: #2c5530; margin-bottom: 1rem; }
+.payment-processing p { color: #666; }
+.order-complete { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 3rem 0; }
+.complete-icon { width: 80px; height: 80px; border-radius: 50%; background: #2c5530; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin-bottom: 1.5rem; }
+.order-complete h2 { color: #2c5530; margin-bottom: 1rem; }
+.order-complete p { color: #666; }
+.complete-actions { margin-top: 2rem; }
+.home-btn { background: #2c5530; color: #fff; border: none; padding: 0.8em 2em; border-radius: 5px; font-size: 1.1em; cursor: pointer; transition: background 0.2s; }
+.home-btn:hover { background: #4a7c59; } 

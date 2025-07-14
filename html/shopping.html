@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EthicShop</title>
+    <link rel="shortcut icon" href="../images/icon.png">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/shopping.css">
+</head>
+<body>
+    <!-- 헤더: 로고, 메뉴 버튼, 로그인/회원가입/장바구니 -->
+    <header>
+        <!-- 모바일용 메뉴 토글 버튼 -->
+        <button class="menu-toggle">☰</button>
+        
+        <!-- 로고 -->
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="../images/logo.png" id="logo" alt="웹사이트 로고">
+            </a>
+        </div>
+        
+        <!-- 로그인 / 회원가입 / 장바구니 -->
+        <ul>
+            <li><a href="#" onclick="openLoginForm()">로그인</a></li>
+            <li>회원가입</li>
+            <li><img class="cart-icon" src="../images/shopping-icon.png" alt="장바구니" /></li>
+        </ul>
+    </header>
+
+    <!-- 상단 메뉴 (탑 내비게이션) -->
+    <nav id="top_menu">
+        <ul>
+            <li><a href="fairtrade.html">공정무역이란?</a></li>
+            <li><a href="shopping.html">상품 구매</a></li>
+            <li>미디어</li>
+            <li>참여하기</li>
+            <li>기업소개</li>
+        </ul>
+    </nav>
+    <!-- 모바일 메뉴 활성화 시 뒷 배경 어둡게 처리 -->
+    <div class="overlay"></div>
+    
+    <main>
+        <div class="container">
+            <h1>공정거래 상품</h1>
+            <p>윤리적이고 지속가능한 상품을 만나보세요.</p>
+            <hr>
+            <div class="items"></div>
+
+        </div>
+    </main>
+
+
+    <!-- 푸터: 사이트 정보 및 링크 -->
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>EthicShop</h2>
+            </div>
+
+
+            <div class="footer-links">
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">사이트맵</a>
+            </div>
+
+
+            <div class="footer-info">
+                <p>상호명: EthicShop | 대표: 현승민</p>
+                <p>사업자등록번호: 123-45-67890</p>
+                <p>주소: 대구광역시 북구 검단로 255</p>
+                <p>© 2025 EthicShop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/shopping.js"></script>
+</body>
+</html>

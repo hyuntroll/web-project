@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/donate.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>기부하기</title>
+    <link rel="stylesheet" href="../css/donate.css" />
 </head>
 <body>
     <header>
@@ -13,28 +13,87 @@
 
     <main>
         <section class="donation-info">
-            <h2>기부 방법</h2>
-            <p>기부는 아래의 계좌로 가능합니다:</p>
-            <ul>
-                <li>은행명: 우리은행</li>
-                <li>계좌번호: 123-456-7890</li>
-                <li>예금주: EthicShop</li>
-            </ul>
-            <p>기부 후, 기부 영수증을 원하시면 이메일로 연락주세요.</p>
+            <h2>후원 정보</h2>
+
+            <p>후원 유형</p>
+            <input type="radio" id="one-time" name="donation-type" value="one-time" checked />
+            <label class="btn" for="one-time">일시 후원</label>
+
+            <input type="radio" id="monthly" name="donation-type" value="monthly" />
+            <label class="btn" for="monthly">정기 후원</label>
+
+            <h4>후원 금액</h4>
+            <input type="radio" id="amount-10000" name="donation-amount" value="10000" checked />
+            <label class="btn" for="amount-10000">10,000원</label>
+
+            <input type="radio" id="amount-20000" name="donation-amount" value="20000" />
+            <label class="btn" for="amount-20000">20,000원</label>
+
+            <input type="radio" id="amount-30000" name="donation-amount" value="30000" />
+            <label class="btn" for="amount-30000">30,000원</label>
+
+            <input type="radio" id="amount-50000" name="donation-amount" value="50000" />
+            <label class="btn" for="amount-50000">50,000원</label>
+
+            <input type="radio" id="amount-100000" name="donation-amount" value="100000" />
+            <label class="btn" for="amount-100000">100,000원</label>
+
+            <input type="radio" id="amount-custom" name="donation-amount" value="custom" />
+            <label class="btn" for="amount-custom">
+                직접 입력
+                <input
+                    type="text"
+                    id="custom-amount-input"
+                    class="donate-amount"
+                    placeholder="금액 입력"
+                    autocomplete="off"
+                    disabled
+                />
+            </label>
         </section>
 
         <section class="donation-form">
-            <h2>기부 신청서</h2>
+            <h2>기본 정보</h2>
             <form action="#" method="post">
                 <label for="name">이름:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" required />
+
+                <label for="phone">전화 번호:</label>
+                <input type="tel" id="phone" name="phone" required />
 
                 <label for="email">이메일:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" />
 
-                <label for="amount">기부 금액:</label>
-                <input type="number" id="amount" name="amount" required>
+                <h4>※ 만 14세 미만 어린이는 보호자의 본인인증 후 진행하실 수 있습니다.</h4>
 
+                <h2>결제 정보</h2>
+                <input type="radio" id="pay-credit" name="payment-method" value="credit-card" checked />
+                <label class="btn" for="pay-credit">신용카드</label>
+
+                <input type="radio" id="pay-bank" name="payment-method" value="bank-transfer" />
+                <label class="btn" for="pay-bank">계좌이체</label>
+
+                <div id="credit-card-info" class="payment-section">
+                    <label for="card-number">카드 번호:</label>
+                    <input
+                        type="text"
+                        id="card-number"
+                        name="card-number"
+                        placeholder="0000-0000-0000-0000"
+                    />
+
+                    <label for="expiry">유효 기간:</label>
+                    <input type="text" id="expiry" name="expiry" placeholder="MM/YY" />
+                </div>
+
+                <div id="bank-transfer-info" class="payment-section" style="display: none;">
+                    <label for="bank-name">은행명:</label>
+                    <input type="text" id="bank-name" name="bank-name" />
+
+                    <label for="account-number">계좌 번호:</label>
+                    <input type="text" id="account-number" name="account-number" />
+                </div>
+                <br />
                 <button type="submit">기부하기</button>
             </form>
         </section>
@@ -43,5 +102,7 @@
     <footer>
         <p>&copy; 2023 EthicShop. All rights reserved.</p>
     </footer>
+
+    <script src="../js/donate.js" defer></script>
 </body>
 </html>

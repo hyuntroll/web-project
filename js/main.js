@@ -31,3 +31,10 @@ function openLoginForm() {
         alert("팝업이 차단되었습니다. 팝업차단을 해제해 주세요.")
     }
 }
+function openSingUpForm() {
+    // 팝업창을 웹페이지 안쪽에 띄움
+    let newWin = window.open("singup.html", "Login", `width=400px, height=500px, left=${window.screenX+100}, top=${window.screenY+100}`);
+    if ( newWin == null) {
+        alert("팝업이 차단되었습니다. 팝업차단을 해제해 주세요.")
+    }
+}

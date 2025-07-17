@@ -319,6 +319,10 @@ main iframe {
     .overlay.hide {
         display: none;
     }
+
+    .hide-in-mobie {
+        display: none;
+    }
       
 
 }

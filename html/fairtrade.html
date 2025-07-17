@@ -14,7 +14,8 @@
     <header>
         <!-- 모바일용 메뉴 토글 버튼 -->
         <button class="menu-toggle">☰</button>
-        
+        <nav>
+        </nav>
         <!-- 로고 -->
         <div class="logo-container">
             <a href="index.html">
@@ -24,6 +25,8 @@
         
         <!-- 로그인 / 회원가입 / 장바구니 -->
         <ul>
+            <li class="hide-in-mobie"><a href="#" onclick="openLoginForm()">로그인</a></li>
+            <li class="hide-in-mobie"><a href="#" onclick="openSingUpForm()">회원가입</a></li>
             <li><img class="cart-icon" src="../images/shopping-icon.png" alt="장바구니" /></li>
         </ul>
     </header>
@@ -42,7 +45,7 @@
     <div id="mobile-nav" class="hide">
         <ul id="header">
             <li><a href="#" onclick="openLoginForm()">로그인</a></li>
-            <li>회원가입</li>
+            <li><a href="#" onclick="openSingUpForm()">회원가입</a></li>
         </ul>
         <hr>
 
@@ -57,9 +60,10 @@
     </div>
     <div class="overlay hide"></div>
 
-
     <!-- 배너 영역 (이미지 등 배경용으로 사용) -->
     <nav id="sub_menu"></nav>
+
+    <!-- 모바일 메뉴 활성화 시 뒷 배경 어둡게 처리 -->
     
     <!-- 메인 콘텐츠 영역 (iframe으로 콘텐츠 불러오기) -->
     <main>

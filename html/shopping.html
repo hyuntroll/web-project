@@ -23,14 +23,12 @@
         
         <!-- 로그인 / 회원가입 / 장바구니 -->
         <ul>
-            <li><a href="#" onclick="openLoginForm()">로그인</a></li>
-            <li>회원가입</li>
             <li><img class="cart-icon" src="../images/shopping-icon.png" alt="장바구니" /></li>
         </ul>
     </header>
 
     <!-- 상단 메뉴 (탑 내비게이션) -->
-    <nav id="top_menu">
+    <nav id="top_menu"> 
         <ul>
             <li><a href="fairtrade.html">공정무역이란?</a></li>
             <li><a href="shopping.html">상품 구매</a></li>
@@ -39,8 +37,24 @@
             <li>기업소개</li>
         </ul>
     </nav>
-    <!-- 모바일 메뉴 활성화 시 뒷 배경 어둡게 처리 -->
-    <div class="overlay"></div>
+
+    <div id="mobile-nav" class="hide">
+        <ul id="header">
+            <li><a href="#" onclick="openLoginForm()">로그인</a></li>
+            <li>회원가입</li>
+        </ul>
+        <hr>
+
+        <ul id="top_menu">
+            <li><a href="fairtrade.html">공정무역이란?</a></li>
+            <li><a href="shopping.html">상품 구매</a></li>
+            <li><a href="media.html">미디어</a></li>
+            <li>참여하기</li>
+            <li>기업소개</li>
+        </ul>
+        
+    </div>
+    <div class="overlay hide"></div>
     
     <main>
         <div class="container">

@@ -79,8 +79,9 @@ p {
     }
 
     .video {
-        /* width: 100%; */
-        width: auto;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
     }
 
     .video img {

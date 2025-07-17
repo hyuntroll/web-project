@@ -78,6 +78,14 @@ p {
         flex: 1 1 100%;
     }
 
+    p {
+        font-size: 4vw;
+    }
+
+    .item .desc {
+        font-size: 3vw;
+    }
+
     .video {
         width: 100%;
         height: auto;

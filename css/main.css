@@ -33,7 +33,7 @@ header li:hover {
 }
 
 .menu-toggle {
-    z-index: 1010px;
+    z-index: 1000;
     display: none;
 }
 
@@ -176,7 +176,9 @@ main iframe {
     bottom: 0;
     width: 200px;
     height: 100%;
-    z-index: 1001;
+    z-index: 999;
+
+    display: none;
 }
 
 #mobile-nav ul#header {
@@ -184,7 +186,7 @@ main iframe {
     justify-content: space-around;
     text-align: center;
 
-    padding: 0 0 0 60px;
+    padding: 0 0 0 70px;
     font-size: 14px;
 }
 
@@ -217,6 +219,18 @@ main iframe {
     display: block;
 }
 
+
+#mobile-nav.hide {
+    display: none;
+}
+
+.overlay {
+    display: none;
+}
+
+.overlay.hide {
+    display: none;
+}
   
 
 @media screen and ( max-width:768px) {
@@ -267,40 +281,10 @@ main iframe {
         padding: 0px 10px;
         text-align: center;
 
-    }   
+    }
 
     #top_menu {
-        
         display: none;
-        padding-top: 5px;
-
-        position: relative;
-        z-index: 1001;
-        background-color: white;
-
-
-    }
-
-    #top_menu ul {
-        /* flex 를 이용한 레이아웃*/
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        padding: 0;
-        /* margin-top: 5px; */
-        margin: 0;
-        position: absolute; /* 배너가 가리도록 */
-
-        z-index: 999;
-        background-color: white;
-
-    }
-    nav#top_menu li {
-        display: block;
-        text-align: center;
-        padding: 15px 10px;
-        border-bottom: 1px solid #bbb;
-
     }
 
     #sub_menu {
@@ -315,5 +299,22 @@ main iframe {
         display: block;
         margin: 10px 0;
     }
+
+    #mobile-nav {
+        display: block;
+    }
+    
+    #mobile-nav.hide {
+        display: none;
+    }
+    
+    .overlay {
+        display: block;
+    }
+    
+    .overlay.hide {
+        display: none;
+    }
+      
 
 }

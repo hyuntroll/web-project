@@ -33,6 +33,7 @@ header li:hover {
 }
 
 .menu-toggle {
+    z-index: 1010px;
     display: none;
 }
 
@@ -163,6 +164,58 @@ main iframe {
 .menu-toggle:hover {
     color: #2c5530;
 }
+
+
+
+
+#mobile-nav {
+    background-color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    height: 100%;
+    z-index: 1001;
+}
+
+#mobile-nav ul#header {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+
+    padding: 0 0 0 60px;
+}
+
+#mobile-nav #header li {
+
+    transition: color 0.3s;
+}
+
+#mobile-nav li {
+    list-style-type: none;
+}
+
+#mobile-nav hr {
+    margin: 0 5px;
+    border: 0.1px solid black;
+}
+
+#mobile-nav #top_menu {
+    padding: 0;
+}
+
+#mobile-nav #top_menu {
+    display: flex;
+
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#mobile-nav #top_menu li {
+    display: block;
+}
+
   
 
 @media screen and ( max-width:768px) {
@@ -176,8 +229,6 @@ main iframe {
         flex-wrap: nowrap; 
 
         flex-basis: 100px;
-
-        z-index: 1000;
 
     }
     .menu-toggle, header ul {
@@ -243,7 +294,7 @@ main iframe {
         background-color: white;
 
     }
-    #top_menu li {
+    nav#top_menu li {
         display: block;
         text-align: center;
         padding: 15px 10px;

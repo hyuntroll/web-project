@@ -72,4 +72,20 @@ p {
     main {
         border-top: 1px solid #333;
     }
+
+    .item {
+        width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .video {
+        /* width: 100%; */
+        width: auto;
+    }
+
+    .video img {
+        object-fit: cover;
+    }
+
+
 }

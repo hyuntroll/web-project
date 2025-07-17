@@ -179,6 +179,8 @@ main iframe {
     z-index: 999;
 
     display: none;
+
+    transition: left 0.2s ease;
 }
 
 #mobile-nav ul#header {
@@ -187,7 +189,7 @@ main iframe {
     text-align: center;
 
     padding: 0 0 0 70px;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 #mobile-nav #header li {
@@ -221,7 +223,7 @@ main iframe {
 
 
 #mobile-nav.hide {
-    display: none;
+    left: -200;
 }
 
 .overlay {
@@ -302,10 +304,12 @@ main iframe {
 
     #mobile-nav {
         display: block;
+        left: 0;
     }
     
     #mobile-nav.hide {
-        display: none;
+        /* display: none; */
+        left: -200px;
     }
     
     .overlay {

@@ -84,7 +84,29 @@ main hr {
 button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
-  }
+}
+
+#item-btn-group {
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    margin: 17px auto;
+}
+
+#item-btn-group button {
+    font-size: 17px;
+    width: 200px;
+    height: 45px;
+    padding: 10px;
+
+    border-radius: 4px;
+    border: none;
+    background-color: #2c5530;
+    color: white;
+}
+#item-btn-group button:active {
+    background-color: #1d381f;
+}
 
 @media screen and ( max-width:768px) {
     #cart {

@@ -1,108 +1,120 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>기부하기</title>
-    <link rel="stylesheet" href="../css/donate.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기부하기 - EthicShop</title>
+    <link rel="shortcut icon" href="../images/icon.png">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/donate.css">
 </head>
 <body>
-    <header>
-        <h1>기부하기</h1>
-    </header>
+    <!-- 헤더 -->
+    <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/meida.css">
+</head>
+<body>
+        <!-- 헤더: 로고, 메뉴 버튼, 로그인/회원가입/장바구니 -->
+        <header>
+            <!-- 모바일용 메뉴 토글 버튼 -->
+            <button class="menu-toggle">☰</button>
+            <nav>
+            </nav>
+            <!-- 로고 -->
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="../images/logo.png" id="logo" alt="웹사이트 로고">
+                </a>
+            </div>
+            
+            <!-- 로그인 / 회원가입 / 장바구니 -->
+            <ul>
+                <li class="hide-in-mobie"><a href="#" onclick="openLoginForm()">로그인</a></li>
+                <li class="hide-in-mobie"><a href="#" onclick="openSingUpForm()">회원가입</a></li>
+                <li><a href="cart.html"><img class="cart-icon" src="../images/shopping-icon.png" alt="장바구니" /></a></li>
+            </ul>
+        </header>
+    
+        <!-- 상단 메뉴 (탑 내비게이션) -->
+        <nav id="top_menu"> 
+            <ul>
+                <li><a href="fairtrade.html">공정무역이란?</a></li>
+                <li><a href="shopping.html">상품 구매</a></li>
+                <li><a href="media.html">미디어</a></li>
+                <li>참여하기</li>
+                <li>기업소개</li>
+            </ul>
+        </nav>
+    
+        <div id="mobile-nav" class="hide">
+            <ul id="header">
+                <li><a href="#" onclick="openLoginForm()">로그인</a></li>
+                <li><a href="#" onclick="openSingUpForm()">회원가입</a></li>
+            </ul>
+            <hr>
+    
+            <ul id="top_menu">
+                <li><a href="fairtrade.html">공정무역이란?</a></li>
+                <li><a href="shopping.html">상품 구매</a></li>
+                <li><a href="media.html">미디어</a></li>
+                <li>참여하기</li>
+                <li>기업소개</li>
+            </ul>
+            
+        </div>
+        <div class="overlay hide"></div>
 
+    <!-- 본문 -->
     <main>
-        <section class="donation-info">
-            <h2>후원 정보</h2>
+        <section class="donate-container">
+            <h1>공정무역 기부 참여</h1>
+            <p>당신의 작은 관심이 큰 변화를 만듭니다.</p>
 
-            <p>후원 유형</p>
-            <input type="radio" id="one-time" name="donation-type" value="one-time" checked />
-            <label class="btn" for="one-time">일시 후원</label>
+            <div class="donate-content">
 
-            <input type="radio" id="monthly" name="donation-type" value="monthly" />
-            <label class="btn" for="monthly">정기 후원</label>
+                <form class="donate-form">
+                    <label for="name">이름</label>
+                    <input type="text" id="name" name="name" placeholder="홍길동" required>
 
-            <h4>후원 금액</h4>
-            <input type="radio" id="amount-10000" name="donation-amount" value="10000" checked />
-            <label class="btn" for="amount-10000">10,000원</label>
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
 
-            <input type="radio" id="amount-20000" name="donation-amount" value="20000" />
-            <label class="btn" for="amount-20000">20,000원</label>
+                    <label for="amount">기부 금액 (₩)</label>
+                    <input type="number" id="amount" name="amount" placeholder="10000" required>
 
-            <input type="radio" id="amount-30000" name="donation-amount" value="30000" />
-            <label class="btn" for="amount-30000">30,000원</label>
+                    <label for="message">응원의 한마디 (선택)</label>
+                    <textarea id="message" name="message" placeholder="응원 메시지를 남겨주세요."></textarea>
 
-            <input type="radio" id="amount-50000" name="donation-amount" value="50000" />
-            <label class="btn" for="amount-50000">50,000원</label>
-
-            <input type="radio" id="amount-100000" name="donation-amount" value="100000" />
-            <label class="btn" for="amount-100000">100,000원</label>
-
-            <input type="radio" id="amount-custom" name="donation-amount" value="custom" />
-            <label class="btn" for="amount-custom">
-                직접 입력
-                <input
-                    type="text"
-                    id="custom-amount-input"
-                    class="donate-amount"
-                    placeholder="금액 입력"
-                    autocomplete="off"
-                    disabled
-                />
-            </label>
-        </section>
-
-        <section class="donation-form">
-            <h2>기본 정보</h2>
-            <form action="#" method="post">
-                <label for="name">이름:</label>
-                <input type="text" id="name" name="name" required />
-
-                <label for="phone">전화 번호:</label>
-                <input type="tel" id="phone" name="phone" required />
-
-                <label for="email">이메일:</label>
-                <input type="email" id="email" name="email" />
-
-                <h4>※ 만 14세 미만 어린이는 보호자의 본인인증 후 진행하실 수 있습니다.</h4>
-
-                <h2>결제 정보</h2>
-                <input type="radio" id="pay-credit" name="payment-method" value="credit-card" checked />
-                <label class="btn" for="pay-credit">신용카드</label>
-
-                <input type="radio" id="pay-bank" name="payment-method" value="bank-transfer" />
-                <label class="btn" for="pay-bank">계좌이체</label>
-
-                <div id="credit-card-info" class="payment-section">
-                    <label for="card-number">카드 번호:</label>
-                    <input
-                        type="text"
-                        id="card-number"
-                        name="card-number"
-                        placeholder="0000-0000-0000-0000"
-                    />
-
-                    <label for="expiry">유효 기간:</label>
-                    <input type="text" id="expiry" name="expiry" placeholder="MM/YY" />
-                </div>
-
-                <div id="bank-transfer-info" class="payment-section" style="display: none;">
-                    <label for="bank-name">은행명:</label>
-                    <input type="text" id="bank-name" name="bank-name" />
-
-                    <label for="account-number">계좌 번호:</label>
-                    <input type="text" id="account-number" name="account-number" />
-                </div>
-                <br />
-                <button type="submit">기부하기</button>
-            </form>
+                    <button type="submit" class="donate-button">기부하기</button>
+                </form>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2023 EthicShop. All rights reserved.</p>
+    <!-- 푸터 -->
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-logo"><h2>EthicShop</h2></div>
+            <div class="footer-links">
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">사이트맵</a>
+            </div>
+            <div class="footer-info">
+                <p>상호명: EthicShop | 대표: 현승민</p>
+                <p>사업자등록번호: 123-45-67890</p>
+                <p>주소: 대구광역시 북구 검단로 255</p>
+                <p>© 2025 EthicShop. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
-    <script src="../js/donate.js" defer></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

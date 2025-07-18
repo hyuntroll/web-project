@@ -1,0 +1,33 @@
+body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    h1, h2 {
+      color: #2f855a;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #777;
+    }

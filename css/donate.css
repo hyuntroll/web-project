@@ -1,0 +1,76 @@
+/* donate.css */
+
+.donate-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.donate-container h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.donate-container p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.donate-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.donate-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    gap: 15px;
+}
+
+.donate-form label {
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+}
+
+.donate-form input,
+.donate-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+.donate-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.donate-button {
+    background-color: #2c5530;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.donate-button:active {
+    background-color: #1d381f;
+}
+
+/* 반응형 */
+@media (max-width: 600px) {
+    .donate-content {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+}

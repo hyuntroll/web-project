@@ -1,0 +1,100 @@
+main {
+    padding: 0;
+    color: #333;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.container {
+    margin: 25px;
+}
+
+.items {
+    margin: 5em 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 50px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.item {
+    width: 320px;
+}
+
+.video {
+    background-color: white;
+    /* margin: auto; */
+    width: 320px;
+    height: 180px;
+    border: 1px solid gainsboro;
+    /* background-color: red; */
+    border-radius: 12px;
+    text-align: left;
+
+    overflow: hidden;
+
+    transition: filter 0.3s ease; 
+}
+
+.video:hover {
+    filter: brightness(90%);
+}
+
+
+.video img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item p {
+    margin: 7px 0px;
+}
+.item .name {
+    font-weight: bold;
+}
+
+.item .desc {
+    height: 55px;
+    font-size: 14px;
+    word-break: break-word;     /* 긴 단어 줄바꿈 */
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;  /* 줄바꿈 보조 */
+    white-space: normal;        /* 줄바꿈 허용 */
+    overflow: hidden;   
+}
+
+
+@media screen and ( max-width:768px) {
+    main {
+        border-top: 1px solid #333;
+    }
+
+    .item {
+        width: 100%;
+        flex: 1 1 100%;
+    }
+
+    p {
+        font-size: 4vw;
+    }
+
+    .item .desc {
+        font-size: 3vw;
+    }
+
+    .video {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .video img {
+        object-fit: cover;
+    }
+
+
+}

@@ -38,3 +38,4 @@ function openSingUpForm() {
         alert("팝업이 차단되었습니다. 팝업차단을 해제해 주세요.")
     }
 }
+

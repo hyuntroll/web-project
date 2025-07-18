@@ -6,7 +6,7 @@
     <title>EthicShop</title>
     <link rel="shortcut icon" href="../images/icon.png">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/introduce.css">
+    <link rel="stylesheet" href="../css/cart.css">
 </head>
 <body>
     <!-- 헤더: 로고, 메뉴 버튼, 로그인/회원가입/장바구니 -->
@@ -59,50 +59,26 @@
     </div>
     <div class="overlay hide"></div>
 
-
-    <!-- 배너 영역 (이미지 등 배경용으로 사용) -->
-    <nav id="sub_menu"></nav>
-    
-    <!-- 메인 콘텐츠 영역 (iframe으로 콘텐츠 불러오기) -->
     <main>
-        <h1>EthicShop 소개</h1>
-    <hr>
-
-    <!-- 웹사이트 제작 목적과 배경 소개 -->
-    <section class="fairtrade-container">
-        <!-- 한 단락 -->    
-        <article>
-            EthicShop은 <strong>공정무역 제품의 소개와 구매를 독려하기 위한 웹사이트</strong>입니다.
-            우리는 통합사회 수업을 통해 공정무역의 중요성과 필요성에 대해 배우게 되었고,
-            이를 더 많은 사람들과 공유하고 실천에 옮기기 위해 이 웹사이트를 제작하게 되었습니다.
-        </article>
-        <article>
-            하지만 현실에서 공정무역 제품은 여전히 대중적인 관심을 받지 못하고 있습니다.
-            많은 소비자들이 <strong>높은 가격</strong>과 <strong>정보 부족</strong>으로 인해 구매를 망설이며,
-            기업들도 <strong>낮은 수익성</strong> 때문에 생산에 소극적인 모습을 보이고 있습니다.
-        </article>
-        <article>
-            이러한 문제를 해결하고자, 우리는 소비자와 생산자가 모두 만족할 수 있는 
-            <strong>지속 가능한 소비 문화</strong>를 만들기 위한 플랫폼을 기획했습니다.
-        </article>
-        <article>
-            EthicShop은 공정무역 제품에 대한 <strong>정확한 정보</strong>를 제공하고,  
-            누구나 쉽고 편리하게 제품을 접하고 <strong>직접 구매</strong>할 수 있는 기회를 제공합니다.
-            이를 통해 공정무역이 더 이상 낯설고 어려운 개념이 아닌, 일상 속 실천 가능한 소비 방식이 되도록 돕고자 합니다.
-        </article>
-    </section>
-
-    <!-- 공정무역 기본 설명 섹션 -->
-    <h1>공정무역이란?</h1>
-    <hr>
-    
-    <section class="fairtrade-container">
-        <article>
-            공정무역이란, 개발도상국의 생산자들에게 정당한 대가를 지불하고 거래하는 것을 말합니다.
-            이는 착취 없는 노동 환경을 보장하고, 생산자들의 자립과 지역사회 발전을 돕기 위한 윤리적인 소비 방식입니다.
-            공정무역은 단순한 상품 거래를 넘어, 사람과 환경을 함께 생각하는 지속 가능한 대안입니다.
-        </article>
-    </section>
+        <h1>장바구니</h1>
+        <hr>
+        <table id="cart">
+            <thead>
+                <th>
+                    <input type="checkbox" name="" id="all-selected">
+                </th>
+                <th>상품정보</th>
+                <th>수량</th>
+                <th>상품금액</th>
+                <th>배송비</th>
+            </thead>
+            <tbody></tbody>
+            <tfoot></tfoot>
+        </table>
+        <div id="item-btn-group">
+            <button id="remove-selected">전체삭제</button>
+            <button id="buy">구매하기</button>
+        </div>
     </main>
 
     <!-- 푸터: 사이트 정보 및 링크 -->
@@ -130,5 +106,6 @@
     </footer>
 
     <script src="../js/main.js"></script>
+    <script src="../js/cart.js"></script>
 </body>
 </html>

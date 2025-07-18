@@ -104,6 +104,7 @@ form {
 }
 
 form input[type="submit"] {
+    margin-top: 10px;
     width: 100%;
     padding: 12px;
     background-color: #2c5530;

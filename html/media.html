@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/meida.css">
+</head>
+<body>
+        <!-- 헤더: 로고, 메뉴 버튼, 로그인/회원가입/장바구니 -->
+        <header>
+            <!-- 모바일용 메뉴 토글 버튼 -->
+            <button class="menu-toggle">☰</button>
+            <nav>
+            </nav>
+            <!-- 로고 -->
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="../images/logo.png" id="logo" alt="웹사이트 로고">
+                </a>
+            </div>
+            
+            <!-- 로그인 / 회원가입 / 장바구니 -->
+            <ul>
+                <li class="hide-in-mobie"><a href="#" onclick="openLoginForm()">로그인</a></li>
+                <li class="hide-in-mobie"><a href="#" onclick="openSingUpForm()">회원가입</a></li>
+                <li><a href="cart.html"><img class="cart-icon" src="../images/shopping-icon.png" alt="장바구니" /></a></li>
+            </ul>
+        </header>
+    
+        <!-- 상단 메뉴 (탑 내비게이션) -->
+        <nav id="top_menu"> 
+            <ul>
+                <li><a href="fairtrade.html">공정무역이란?</a></li>
+                <li><a href="shopping.html">상품 구매</a></li>
+                <li><a href="media.html">미디어</a></li>
+                <li>참여하기</li>
+                <li>기업소개</li>
+            </ul>
+        </nav>
+    
+        <div id="mobile-nav" class="hide">
+            <ul id="header">
+                <li><a href="#" onclick="openLoginForm()">로그인</a></li>
+                <li><a href="#" onclick="openSingUpForm()">회원가입</a></li>
+            </ul>
+            <hr>
+    
+            <ul id="top_menu">
+                <li><a href="fairtrade.html">공정무역이란?</a></li>
+                <li><a href="shopping.html">상품 구매</a></li>
+                <li><a href="media.html">미디어</a></li>
+                <li>참여하기</li>
+                <li>기업소개</li>
+            </ul>
+            
+        </div>
+        <div class="overlay hide"></div>
+
+        <main>
+            <div class="container">
+                <h1>영상 자료</h1>
+                <p>윤리적이고 지속가능한 상품을 만나보세요.</p>
+                <div class="items"></div>
+            </div>
+                
+            
+            
+        </main>
+
+
+    <script src="../js/main.js"></script>
+    <script src="../js/media.js"></script>
+</body>
+</html>

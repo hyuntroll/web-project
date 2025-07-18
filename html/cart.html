@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EthicShop</title>
+    <link rel="shortcut icon" href="../images/icon.png">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+    <!-- 헤더: 로고, 메뉴 버튼, 로그인/회원가입/장바구니 -->
+    <header>
+        <!-- 모바일용 메뉴 토글 버튼 -->
+        <button class="menu-toggle">☰</button>
+        <nav>
+        </nav>
+        <!-- 로고 -->
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="../images/logo.png" id="logo" alt="웹사이트 로고">
+            </a>
+        </div>
+        
+        <!-- 로그인 / 회원가입 / 장바구니 -->
+        <ul>
+            <li class="hide-in-mobie"><a href="#" onclick="openLoginForm()">로그인</a></li>
+            <li class="hide-in-mobie"><a href="#" onclick="openSingUpForm()">회원가입</a></li>
+            <li><img class="cart-icon" src="../images/shopping-icon.png" alt="장바구니" /></li>
+        </ul>
+    </header>
+
+    <!-- 상단 메뉴 (탑 내비게이션) -->
+    <nav id="top_menu"> 
+        <ul>
+            <li><a href="fairtrade.html">공정무역이란?</a></li>
+            <li><a href="shopping.html">상품 구매</a></li>
+            <li><a href="media.html">미디어</a></li>
+            <li>참여하기</li>
+            <li>기업소개</li>
+        </ul>
+    </nav>
+
+    <div id="mobile-nav" class="hide">
+        <ul id="header">
+            <li><a href="#" onclick="openLoginForm()">로그인</a></li>
+            <li><a href="#" onclick="openSingUpForm()">회원가입</a></li>
+        </ul>
+        <hr>
+
+        <ul id="top_menu">
+            <li><a href="fairtrade.html">공정무역이란?</a></li>
+            <li><a href="shopping.html">상품 구매</a></li>
+            <li><a href="media.html">미디어</a></li>
+            <li>참여하기</li>
+            <li>기업소개</li>
+        </ul>
+        
+    </div>
+    <div class="overlay hide"></div>
+
+    <main>
+        <h1>장바구니</h1>
+        <hr>
+        <table id="cart">
+            <thead>
+                <th>
+                    <input type="checkbox" name="" id="all-selected">
+                </th>
+                <th>상품정보</th>
+                <th>수량</th>
+                <th>상품금액</th>
+                <th>배송비</th>
+            </thead>
+            <tbody></tbody>
+            <tfoot></tfoot>
+        </table>
+        <div class="button-group">
+            <button class="remove-selected">전체삭제</button>
+            <button class="buy">구매하기</button>
+        </div>
+    </main>
+
+    <!-- 푸터: 사이트 정보 및 링크 -->
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>EthicShop</h2>
+            </div>
+
+
+            <div class="footer-links">
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">사이트맵</a>
+            </div>
+
+
+            <div class="footer-info">
+                <p>상호명: EthicShop | 대표: 현승민</p>
+                <p>사업자등록번호: 123-45-67890</p>
+                <p>주소: 대구광역시 북구 검단로 255</p>
+                <p>© 2025 EthicShop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/cart.js"></script>
+</body>
+</html>

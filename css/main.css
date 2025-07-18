@@ -32,10 +32,6 @@ header li:hover {
     color: #2c5530;
 }
 
-.menu-toggle {
-    display: none;
-}
-
 .cart-icon {
     width: 18px;
     height: 18px;
@@ -158,10 +154,78 @@ main iframe {
 }
 
 .menu-toggle {
+    z-index: 1000;
+    display: none;
     transition: color 0.3s;
 }
 .menu-toggle:hover {
     color: #2c5530;
+}
+
+
+
+
+#mobile-nav {
+    background-color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    height: 100%;
+    z-index: 999;
+
+    display: none;
+}
+
+#mobile-nav ul#header {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+
+    padding: 0 0 0 70px;
+    font-size: 13px;
+}
+
+#mobile-nav #header li {
+
+    transition: color 0.3s;
+}
+
+#mobile-nav li {
+    list-style-type: none;
+}
+
+#mobile-nav hr {
+    margin: 0 5px;
+    border: 0.1px solid black;
+}
+
+#mobile-nav #top_menu {
+    padding: 0;
+
+    display: flex;
+
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#mobile-nav #top_menu li {
+    transition: transform 0.3s ease;
+}
+
+#mobile-nav #top_menu li:hover {
+    /* transform을 사용했을 때 애니메이션을 사용하면 GPU 가속, transform만 변경되기 때문에
+    */
+    transform: translateY(-3px);
+}
+
+.overlay {
+    display: none;
+}
+
+.overlay.hide {
+    display: none;
 }
   
 
@@ -176,8 +240,6 @@ main iframe {
         flex-wrap: nowrap; 
 
         flex-basis: 100px;
-
-        z-index: 1000;
 
     }
     .menu-toggle, header ul {
@@ -215,40 +277,10 @@ main iframe {
         padding: 0px 10px;
         text-align: center;
 
-    }   
+    }
 
     #top_menu {
-        
         display: none;
-        padding-top: 5px;
-
-        position: relative;
-        z-index: 1001;
-        background-color: white;
-
-
-    }
-
-    #top_menu ul {
-        /* flex 를 이용한 레이아웃*/
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        padding: 0;
-        /* margin-top: 5px; */
-        margin: 0;
-        position: absolute; /* 배너가 가리도록 */
-
-        z-index: 999;
-        background-color: white;
-
-    }
-    #top_menu li {
-        display: block;
-        text-align: center;
-        padding: 15px 10px;
-        border-bottom: 1px solid #bbb;
-
     }
 
     #sub_menu {
@@ -263,5 +295,29 @@ main iframe {
         display: block;
         margin: 10px 0;
     }
+
+    #mobile-nav {
+        display: block;
+        left: 0;
+        transition: transform 0.3s ease;
+    }
+    
+    #mobile-nav.hide {
+        /* display: none; */
+        transform: translateX(-200px);
+    }
+    
+    .overlay {
+        display: block;
+    }
+    
+    .overlay.hide {
+        display: none;
+    }
+
+    .hide-in-mobie {
+        display: none;
+    }
+      
 
 }

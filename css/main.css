@@ -176,8 +176,6 @@ main iframe {
     z-index: 999;
 
     display: none;
-
-    transition: left 0.2s ease;
 }
 
 #mobile-nav ul#header {
@@ -213,17 +211,13 @@ main iframe {
 }
 
 #mobile-nav #top_menu li {
-    position: relative;
     transition: transform 0.3s ease;
 }
 
 #mobile-nav #top_menu li:hover {
+    /* transform을 사용했을 때 애니메이션을 사용하면 GPU 가속, transform만 변경되기 때문에
+    */
     transform: translateY(-3px);
-}
-
-
-#mobile-nav.hide {
-    left: -200;
 }
 
 .overlay {
@@ -305,11 +299,12 @@ main iframe {
     #mobile-nav {
         display: block;
         left: 0;
+        transition: transform 0.3s ease;
     }
     
     #mobile-nav.hide {
         /* display: none; */
-        left: -200px;
+        transform: translateX(-200px);
     }
     
     .overlay {

@@ -32,11 +32,6 @@ header li:hover {
     color: #2c5530;
 }
 
-.menu-toggle {
-    z-index: 1000;
-    display: none;
-}
-
 .cart-icon {
     width: 18px;
     height: 18px;
@@ -159,6 +154,8 @@ main iframe {
 }
 
 .menu-toggle {
+    z-index: 1000;
+    display: none;
     transition: color 0.3s;
 }
 .menu-toggle:hover {
@@ -208,9 +205,7 @@ main iframe {
 
 #mobile-nav #top_menu {
     padding: 0;
-}
 
-#mobile-nav #top_menu {
     display: flex;
 
     flex-wrap: wrap;
@@ -218,7 +213,12 @@ main iframe {
 }
 
 #mobile-nav #top_menu li {
-    display: block;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+#mobile-nav #top_menu li:hover {
+    transform: translateY(-3px);
 }
 
 

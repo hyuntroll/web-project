@@ -2,18 +2,16 @@ body {
     margin: 0px;  
     color: #333;
 }
-header {
-    background-color: white;
-
+header { background-color: white; }
+a {
+    text-decoration: none;
+    color: #333;
 }
 #logo {
     width: 100px;
     float: left;
 }
-header ul {
-    /* 오른쪽으로 배치 */
-    float: right;
-}
+header ul { float: right; }
 header li {
     /* 요소를 인라인으로 */
     display: inline;
@@ -21,14 +19,8 @@ header li {
     transition: color 0.3s;
 }
 
-header li a {
-    transition: color 0.3s;
-}
+header li a { transition: color 0.3s; }
 header li a:hover {
-    color: #2c5530;
-}
-
-header li:hover {
     color: #2c5530;
 }
 
@@ -63,27 +55,18 @@ header li:hover {
 #top_menu li {
     display: inline;
     padding: 13px 40px;
-    transition: color 0.3s;
+}
+#top_menu a { 
+    display: inline-block; /* inline일때는 tranform이 적용안됨*/
+    transition: color 0.3s ease;
+    transition: transform 0.3s ease;
+}
+#top_menu li:hover a {
+    color: #2c5530; 
+    transform: translateY(-3px);
+}
 
-}
-#top_menu li:hover {
-    color: #2c5530;
-}
 
-a {
-    text-decoration: none;
-    color: #333;
-}
-
-nav li a {
-    transition: color 0.3s;
-}
-nav li, header li {
-    cursor:pointer;
-}
-nav li:hover, nav:hover a {
-    color: #2c5530;
-}
 
 #sub_menu {
     width: 100%;

@@ -99,7 +99,15 @@ const products = [
         image: "https://images.unsplash.com/photo-1611688003907-93cf84a28b5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
     }
 ];
-    
+
+function saveCartToStorage(cart) {
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function loadCartFromStorage() {
+    const data = localStorage.getItem("cart");
+    return data ? JSON.parse(data) : [];
+}
 
 products.forEach(pro => {
     const item = document.createElement("div");
@@ -125,6 +133,28 @@ products.forEach(pro => {
 
     const btn = document.createElement("button");
     btn.textContent = "장바구니에 담기";
+
+    btn.addEventListener("click", () => {
+        let cart = loadCartFromStorage();
+        const existing = cart.find(item => item.id === pro.id);
+        
+        if (existing) {
+            existing.amount += 1;
+        } else {
+            cart.push({
+                id: pro.id,
+                name: pro.name,
+                price: pro.price,
+                description: pro.description,
+                image: pro.image,
+                amount: 1
+            });
+        }
+    
+        saveCartToStorage(cart);
+        alert("장바구니에 담았습니다.");
+    });
+    
 
     item.append(imgContainer, name, desc, price, btn);
     itemContainer.appendChild(item);
